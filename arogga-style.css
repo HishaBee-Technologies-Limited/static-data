@@ -1,4 +1,4 @@
- javascript:(function() {
+javascript:(function() {
             
                 function addCustomStyles() {
                     var css = `
@@ -133,32 +133,29 @@
                     }, 1000);
                     
                        const interval3 = setInterval(() => {
-                      var products = document.querySelectorAll('[class*="product_product_details"]')
-                      if (products && products.length) {
+                      var products = document?.querySelectorAll('[class*="product_product_details"]')
+                      if (products && products?.length) {
                             console.log('count', products.length)
-                            products.forEach(product =>{
-                                var del_elm = product.querySelector('del');
-                                var org_elm = product.querySelector('h4');
+                            products?.forEach(product =>{
+                                var del_elm = product?.querySelector('del');
+                                var org_elm = product?.querySelector('h4');
                                 if(del_elm && org_elm){
-                                    var diff = (del_elm.textContent?.split('৳')[1] || 0) - (org_elm.textContent?.split('৳')[1] || 0);
+                                    var diff = (del_elm?.textContent?.split('৳')[1] || 0) - (org_elm?.textContent?.split('৳')[1] || 0);
                                     if(diff){
-                                     var exist = product.querySelector('.profit-style');
+                                     var exist = product?.querySelector('.profit-style');
                                      if(!exist){
-                                         var el_ex = document.createElement('div');
-                                         el_ex.className = 'profit-style';
+                                         var el_ex3 = document.createElement('div');
+                                         el_ex3.className = 'profit-style';
                                          console.log('append element');
                                          var text =  document.createElement('span');
                                          text.textContent = 'লাভ:  ৳';
                                          var profit = document.createElement('span');
                                          profit.textContent = diff;
-                                         el_ex.appendChild(text)
-                                         el_ex.appendChild(profit)
-                                        product.appendChild(el_ex);
+                                         el_ex3.appendChild(text)
+                                         el_ex3.appendChild(profit)
+                                        product?.appendChild(el_ex3);
                                      } 
-                                     
                                     }
-                                    
-                                    
                                 }
                             })
                         
@@ -170,8 +167,8 @@
                       var button = document.querySelector('a[href="/shopping-cart"]')
                       if (button) {
                         button.addEventListener('click', function(e){
-                            event.preventDefault();
-                            window?.AndroidInterface.subscriptionCheck();
+                            e?.preventDefault();
+                            window?.AndroidInterface?.subscriptionCheck();
                         })
                         clearInterval(interval4);
                       }
