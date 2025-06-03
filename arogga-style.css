@@ -1,6 +1,4 @@
-javascript:(function() {
-            
-                function addCustomStyles() {
+function addCustomStyles() {
                     var css = `
                         /* Hide header and navigation */
                         img[alt="arogga logo"]{display: none !important;}
@@ -19,7 +17,7 @@ javascript:(function() {
                         div[class*="footer_menu_wrap"] a:not(:last-child){
 	                        display: none !important;
                           }
-                        div[class*="footer_menu_wrap"]> a:last-child{
+                        div[class*="footer_menu_wrap"]> a:last-child:not([class*="manage-address_add_new_address"]){
 	                        position: absolute !important;
 	                        bottom: 40px !important;
 	                        right: 20px !important;
@@ -57,7 +55,7 @@ javascript:(function() {
                              top: 18px !important;
                            	z-index: 2333 !important;
                            }
-                        div[class*="footer_menu_wrap"]> a:last-child  {
+                        div[class*="footer_menu_wrap"]> a:last-child:not([class*="manage-address_add_new_address"])  {
                            	color: transparent !important;
                            	font-size: 10px !important;
                            }
@@ -114,7 +112,7 @@ javascript:(function() {
                     var code = `
                     
                     try{
-                    const interval = setInterval(() => {
+                    var interval = setInterval(() => {
                       var el_ex = document.querySelector('[class*="header_logo_wrap"]')
                       if (el_ex) {
                         el_ex.innerHTML = '<span style="padding:6px;" onclick="window?.AndroidInterface?.goBack()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F2937"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"></path></svg></span>'
@@ -123,7 +121,7 @@ javascript:(function() {
                       }
                     }, 1000);
                     
-                    const interval2 = setInterval(() => {
+                    var interval2 = setInterval(() => {
                       var el_ex2 = document.querySelector('[class*="header_back_ic"]')
                       if (el_ex2) {
                         el_ex2.innerHTML = '<span style="padding:6px;" onclick="window?.AndroidInterface?.goBack()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F2937"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"></path></svg></span>'
@@ -132,7 +130,7 @@ javascript:(function() {
                       }
                     }, 1000);
                     
-                       const interval3 = setInterval(() => {
+                       var interval3 = setInterval(() => {
                       var products = document?.querySelectorAll('[class*="product_product_details"]')
                       if (products && products?.length) {
                             console.log('count', products.length)
@@ -163,7 +161,7 @@ javascript:(function() {
                       }
                     }, 1000);
                     
-                    const interval4 = setInterval(() => {
+                    var interval4 = setInterval(() => {
                       var button = document.querySelector('a[href="/shopping-cart"]')
                       if (button) {
                         button.addEventListener('click', function(e){
