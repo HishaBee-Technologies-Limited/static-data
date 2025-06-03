@@ -1,4 +1,6 @@
-function addCustomStyles() {
+javascript:(function() {
+            
+                function addCustomStyles() {
                     var css = `
                         /* Hide header and navigation */
                         img[alt="arogga logo"]{display: none !important;}
@@ -112,7 +114,7 @@ function addCustomStyles() {
                     var code = `
                     
                     try{
-                    var interval = setInterval(() => {
+                    const interval = setInterval(() => {
                       var el_ex = document.querySelector('[class*="header_logo_wrap"]')
                       if (el_ex) {
                         el_ex.innerHTML = '<span style="padding:6px;" onclick="window?.AndroidInterface?.goBack()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F2937"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"></path></svg></span>'
@@ -121,7 +123,7 @@ function addCustomStyles() {
                       }
                     }, 1000);
                     
-                    var interval2 = setInterval(() => {
+                    const interval2 = setInterval(() => {
                       var el_ex2 = document.querySelector('[class*="header_back_ic"]')
                       if (el_ex2) {
                         el_ex2.innerHTML = '<span style="padding:6px;" onclick="window?.AndroidInterface?.goBack()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F2937"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"></path></svg></span>'
@@ -130,38 +132,9 @@ function addCustomStyles() {
                       }
                     }, 1000);
                     
-                       var interval3 = setInterval(() => {
-                      var products = document?.querySelectorAll('[class*="product_product_details"]')
-                      if (products && products?.length) {
-                            console.log('count', products.length)
-                            products?.forEach(product =>{
-                                var del_elm = product?.querySelector('del');
-                                var org_elm = product?.querySelector('h4');
-                                if(del_elm && org_elm){
-                                    var diff = (del_elm?.textContent?.split('৳')[1] || 0) - (org_elm?.textContent?.split('৳')[1] || 0);
-                                    if(diff){
-                                     var exist = product?.querySelector('.profit-style');
-                                     if(!exist){
-                                         var el_ex3 = document.createElement('div');
-                                         el_ex3.className = 'profit-style';
-                                         console.log('append element');
-                                         var text =  document.createElement('span');
-                                         text.textContent = 'লাভ:  ৳';
-                                         var profit = document.createElement('span');
-                                         profit.textContent = diff;
-                                         el_ex3.appendChild(text)
-                                         el_ex3.appendChild(profit)
-                                        product?.appendChild(el_ex3);
-                                     } 
-                                    }
-                                }
-                            })
-                        
-                        clearInterval(interval3);
-                      }
-                    }, 1000);
                     
-                    var interval4 = setInterval(() => {
+                    
+                    const interval4 = setInterval(() => {
                       var button = document.querySelector('a[href="/shopping-cart"]')
                       if (button) {
                         button.addEventListener('click', function(e){
