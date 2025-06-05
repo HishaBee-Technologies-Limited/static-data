@@ -1,5 +1,4 @@
 javascript:(function() {
-            
                 function addCustomStyles() {
                     var css = `
                         /* Hide header and navigation */
@@ -98,16 +97,16 @@ javascript:(function() {
                     
                 }
                 
-                window.isSubscribed = function(data){
-                    console.log('subs nai', data);
-                    if(data){
-                        window.open('https://m.arogga.com/shopping-cart'); 
-                    }else{
-                        console.log('subs nai', data);
-                   
-                    }
-                    
-                }
+//                window.isSubscribed = function(data){
+//                    console.log('subs nai', data);
+//                    if(data){
+//                        window.open('https://m.arogga.com/shopping-cart'); 
+//                    }else{
+//                        console.log('subs nai', data);
+//                   
+//                    }
+//                    
+//                }
                 
                 function addCustomScript() {
                    
@@ -134,16 +133,16 @@ javascript:(function() {
                     
                     
                     
-                    const interval4 = setInterval(() => {
-                      var button = document.querySelector('a[href="/shopping-cart"]')
-                      if (button) {
-                        button.addEventListener('click', function(e){
-                            e?.preventDefault();
-                            window?.AndroidInterface?.subscriptionCheck();
-                        })
-                        clearInterval(interval4);
-                      }
-                    }, 1000);
+//                    const interval4 = setInterval(() => {
+//                      var button = document.querySelector('a[href="/shopping-cart"]')
+//                      if (button) {
+//                        button.addEventListener('click', function(e){
+//                            e?.preventDefault();
+//                            window?.AndroidInterface?.subscriptionCheck();
+//                        })
+//                        clearInterval(interval4);
+//                      }
+//                    }, 1000);
                        
                     }catch(err){
                       //ignore error
