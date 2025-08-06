@@ -1,3 +1,27 @@
-.app {
-  display: block;
-}
+javascript:(function() {
+                function addCustomStyles() {
+                    var css = `
+                        /* Hide header and navigation */
+                        img[alt="arogga logo"]{display: none !important;}
+                        a[aria-label="Chat with us on Messenger"]{display: none !important;}
+                    `;
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = css;
+                    document.head.appendChild(style);
+                }
+                
+                // Apply styles immediately and after a delay
+                addCustomStyles();
+                setTimeout(addCustomStyles, 500);
+                setTimeout(addCustomStyles, 1500);
+              
+                // Observer for dynamically loaded content
+                var observer = new MutationObserver(function(mutations) {
+                    addCustomStyles();
+                });
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            })();
