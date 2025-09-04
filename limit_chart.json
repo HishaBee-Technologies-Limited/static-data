@@ -1,0 +1,14 @@
+{
+  "buy": 10,
+  "sell": 8,
+  "expense": 10,
+  "expense_category": 2,
+  "due": 5,
+  "product_list": 15,
+  "stock_list": 15,
+  "contact_list_customer": 5,
+  "contact_list_supplier": 5,
+  "contact_list_employee": 5,
+  "expired_product": 5,
+  "warranty": 5
+}
