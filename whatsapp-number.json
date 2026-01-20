@@ -2,4 +2,8 @@
   "paid_user": "+8801842088051",
   "un_paid_user": "+8801958155619",
   "initial_message": "লাইভ চ্যাট শুরু করুন"
+  "global_paid_user": "+8801842088051",
+  "global_un_paid_user": "+8801958155619",
+  "global_initial_message": "লাইভ চ্যাট শুরু করুন",
+  "is_fresh_chat_active":true
 }
